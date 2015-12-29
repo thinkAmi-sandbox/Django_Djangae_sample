@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Ringo Management</title>
+</head>
+<body>
+    <div id="main">
+        <form method="post" action="" name="detail">
+            <fieldset>
+                {% csrf_token %}
+                
+                {{ form.as_p }}
+                
+                <input type="submit" id="save" value="Save">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

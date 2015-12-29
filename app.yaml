@@ -4,6 +4,10 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+# for --sandbox=remote migrate/loaddata, etc
+builtins:
+- remote_api: on
+
 handlers:
 - url: /_ah/(mapreduce|queue|warmup).*
   script: myproject.wsgi.application
@@ -11,3 +15,7 @@ handlers:
 
 - url: /.*
   script: myproject.wsgi.application
+  
+libraries:
+- name: yaml
+  version: "3.10"

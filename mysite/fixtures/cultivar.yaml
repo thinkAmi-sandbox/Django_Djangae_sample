@@ -1,0 +1,12 @@
+- model: mysite.Cultivar
+  pk: 1
+  fields:
+    name: ふじ
+- model: mysite.Cultivar
+  pk: 2
+  fields:
+    name: シナノゴールド
+- model: mysite.Cultivar
+  pk: 3
+  fields:
+    name: 秋映

@@ -17,5 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'^_ah/', include('djangae.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^mysite/', include('mysite.urls', namespace="myform")),
 ]
