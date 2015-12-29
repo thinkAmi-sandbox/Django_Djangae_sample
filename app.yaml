@@ -1,0 +1,13 @@
+application: djangaethinkamisample
+version: 20151228
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /_ah/(mapreduce|queue|warmup).*
+  script: myproject.wsgi.application
+  login: admin
+
+- url: /.*
+  script: myproject.wsgi.application
